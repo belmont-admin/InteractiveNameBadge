@@ -50,7 +50,7 @@ input.onButtonPressed(Button.A, function () {
 
 ## Step 4: Test the badge @fullscreen
 
-Go to the simulator and test your name badge by pressing button **A**.
+Go to the simulator and test your name badge by pressing button ``|A|``.
 
 ## Step 5: Download @fullscreen
 
