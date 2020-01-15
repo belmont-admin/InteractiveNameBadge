@@ -1,30 +1,61 @@
-> Open this page at [https://belmont-admin.github.io/interactivenamebadge/](https://belmont-admin.github.io/interactivenamebadge/)
+# Interactive Name Badge
 
-## Use this extension
+![Name scrolling on the LEDs](/static/mb/projects/name-tag/name-tag.gif)
 
-This repository can be added as an **extension** in MakeCode.
+## Introduction @unplugged
 
-* open [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* click on **New Project**
-* click on **Extensions** under the gearwheel menu
-* search for **https://github.com/belmont-admin/interactivenamebadge** and import
+Make yourself known with a fancy name badge powered by your @boardname@!
 
-## Edit this extension ![Build status badge](https://github.com/belmont-admin/interactivenamebadge/workflows/MakeCode/badge.svg)
+We will use this project to learn the key steps in wrting code to run on the @boardname@. You will:
 
-To edit this repository in MakeCode.
+1. **Code it**     - write your code in the MakeCode editor
+2. **Test it**     - use the simulator to debug your code
+3. **Connect it**  - attach your micro:bit to the PC with a USB cable
+4. **Pair it**     - set up the communication link to the micro:bit  
+5. **Download it** - send your code to the micro:bit
+6. **Use it**      - check your code running on the micro:bit
+7. **Save it**     - save your code to your student drive
 
-* open [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* click on **Import** then click on **Import URL**
-* paste **https://github.com/belmont-admin/interactivenamebadge** and click import
+## Step 1: Code @fullscreen
 
-## Blocks preview
+First, let's get your name to display on the screen.
 
-This image shows the blocks code from the last commit in master.
-This image may take a few minutes to refresh.
+From the ``||input:Input||`` Toolbox drawer, drag an ``||input:on button A pressed||`` block onto the Workspace.
 
-![A rendered view of the blocks](https://github.com/belmont-admin/interactivenamebadge/raw/master/.github/makecode/blocks.png)
+```blocks
+input.onButtonPressed(Button.A, function () {
 
-#### Metadata (used for search, rendering)
+})
+```
 
-* for PXT/microbit
-<script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
+## Step 2: Show a string @fullscreen
+
+From the ``||basic:Basic||`` Toolbox drawer drag a ``||basic:show string||`` block into the ``||input:on button A pressed||`` block.
+
+```blocks
+input.onButtonPressed(Button.A, function () {
+    basic.showString("Hello!")
+})
+```
+
+## Step 3: Show my name @fullscreen
+
+In the ``||basic:show string||`` block, type your name.
+
+```blocks
+input.onButtonPressed(Button.A, function () {
+    basic.showString("My Name")
+})
+```
+
+## Step 4: Test the badge @fullscreen
+
+Go to the simulator and test your name badge by pressing button **A**.
+
+## Step 5: Download @fullscreen
+
+Congratulations on writing your first bit of code for the micro:bit. 
+
+Now you need **download** your code onto the micro:bit and run it. You should have already loaded a page of instructions on how to do that from the [Belmont Primary Code Club](https://sites.google.com/view/belmontcodeclub/help/microbit) web site.
+
+Once you have downloaded your code remember to **save** it as well.
